@@ -8,7 +8,7 @@
 <h1>First response is:</h1><h2 id="first">no response</h2>
 <h1>Second response is:</h1><h2 id="second">no response</h2>
 <script>
-    const resp1 = await fetch("https://services-stg.kenshoo-lab.com/api/v1/kreative-online/profiles/002a18be-e159-4f9e-93dc-d99c78a55712/v1/media/search", {
+    const resp1 = fetch("https://services-stg.kenshoo-lab.com/api/v1/kreative-online/profiles/002a18be-e159-4f9e-93dc-d99c78a55712/v1/media/search", {
         "headers": {
             "accept": "application/json",
             "content-type": "application/json"
@@ -18,7 +18,7 @@
     });
     document.getElementById("first").innerText = await resp1.json();
 
-    const resp2 = await fetch("https://www.mocky.io/v2/5c52c3053200006a20855", {
+    const resp2 = fetch("https://www.mocky.io/v2/5c52c3053200006a20855", {
         "method": "POST"
     });
     document.getElementById("second").innerText = await resp2.json();
